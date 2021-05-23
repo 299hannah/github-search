@@ -1,14 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <a class="navbar-brand" >Github Search</a>
 
   <div class="container">
+   
+<ul>
+  <a routerLink='/about' routerLinkActive='active'>Home</a>
+   
+     <a  routerLink='/gitform' routerLinkActive='active'>Search Users</a>
 
-      <a routerLink='/about' routerLinkActive='active'>Home</a>
-      <a class="btn btn-outline-warning btn-sm" routerLink='/gitform' routerLinkActive='active'>Search Users</a>
-
-       <a class="btn btn-outline-warning btn-sm" routerLink='/gitdetails' routerLinkActive='active'>Search
-          Details</a>
+  <a  routerLink='/gitdetails' routerLinkActive='active'>Search Details</a>
+          </ul>
+          
     </div>
-  
+ </div> 
 <div class="container">
   <router-outlet></router-outlet>
 </div>

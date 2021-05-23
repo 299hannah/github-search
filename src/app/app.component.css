@@ -1,13 +1,13 @@
 .container-fluid{
-    background-color: rgb(4, 82, 4);
-    color: black;
+    /* background-color: rgb(4, 82, 4); */
+    background-color: black;
 }
 ul{
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-left: 65%;
+    margin-left: 70%;
   color: black;
-   
+  
 }
 ul>a{
     
@@ -15,10 +15,17 @@ ul>a{
     margin-left: 10px;
     margin-right: 10px;
     
-   
-    
 }
 
 .active{
-    color:ivory;
+
+    color: whitesmoke;
+}
+.navbar-brand{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 60px;
+    float: left;
+    color: blanchedalmond;
+   
 }
