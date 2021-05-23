@@ -8,7 +8,7 @@ import { GitformComponent } from './gitform/gitform.component';
 const routes: Routes = [
   {path: 'gitdetails', component: GitdetailsComponent},
   {path: 'gitform', component: GitformComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
 
 ];
 
