@@ -5,6 +5,7 @@ import { GithubserviceService } from ''
   providedIn: 'root'
 })
 export class GithubserviceService {
+  user: import("/home/annah/Documents/core/github-search/src/app/user").User;
 
   constructor() { }
 }
