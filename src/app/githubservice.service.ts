@@ -34,6 +34,7 @@ export class GithubserviceService {
         this.user.public_repos = response.public_repos;
         this.user.avatar_url = response.avatar_url;
         this.user.created_at = response.created_at;
+        this.user.login = response.login;
 
         resolve()
       },
