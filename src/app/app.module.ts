@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { GitDetailsComponent } from './gitdetails/gitdetails.component';
 import { GitformComponent } from './gitform/gitform.component';
 import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitDetailsComponent,
     GitformComponent,
-    AboutComponent
+    AboutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
