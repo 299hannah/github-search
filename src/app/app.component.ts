@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AboutComponent } from './about/about.component';
-import { GitdetailsComponent } from './gitdetails/gitdetails.component';
+import { GitDetailsComponent } from './gitdetails/gitdetails.component';
 import { GitformComponent } from './gitform/gitform.component';
 
 

@@ -3,28 +3,24 @@ import { GithubserviceService } from '../githubservice.service';
 import { User } from '../user';
 
 
+
 @Component({
   selector: 'app-gitdetails',
   templateUrl: './gitdetails.component.html',
   styleUrls: ['./gitdetails.component.css']
 })
-export class GitdetailsComponent implements OnInit {
+export class GitDetailsComponent implements OnInit {
   user:User;
   repoDetails = [];
-  githubserviceService:GithubserviceService
+  githubserviceService: GithubserviceService;
 
-  constructor(  githubserviceService:GithubserviceService
-    ) {
-  this.githubserviceService=githubserviceService
-
-     }
+  constructor(  githubserviceService: GithubserviceService ) {
+    this.githubserviceService = githubserviceService
+   }
 
   ngOnInit(){
     this.user = this.githubserviceService.user;
     this.repoDetails = this.githubserviceService.repoData;
-    
   }
 
 }
-
-

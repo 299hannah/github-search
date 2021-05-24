@@ -1,19 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { User } from './user';
+import { Repository } from './repository';
+import { environment } from '../environments/environment';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class GithubserviceService {
-  
+
   user: User;
+  repository: Repository;
   repoData = [];
   newUserData: any = [];
 
   constructor(private http: HttpClient) {
     this.user = new User("", 0, "", "", new Date());
-
+    this.repository = new Repository("", "", new Date(), "", "");
 
   }
   getUserData(username: string) {
@@ -37,19 +41,18 @@ export class GithubserviceService {
           reject(error)
 
         })
-      // this.http.get<any>('https://api.github.com/users/' + username + "/repos").toPromise().then(response => {
-      //   for (let i = 0; i<response.length; i++) {
-      //     this.newUserData = new Repository(response[i].name, response[i].description, response[i].updated_at, response[i].clone_url, response[i].language)
-      //     this.repoData.push(this.newUserData);
-      //   }
-      //     resolve()
-      // },
-      //   error => {
-      //     reject(error)
+      this.http.get<any>(environment.apiUrl + username + "/repos").toPromise().then(response => {
+        for (let i = 0; i < response.length; i++) {
+          this.newUserData = new Repository(response[i].name, response[i].description, response[i].updated_at, response[i].clone_url, response[i].language)
+          this.repoData.push(this.newUserData);
+        }
+        resolve()
+      },
+        error => {
+          reject(error)
 
-      //   })
-      //   })
-        // return promise;
+        })
     })
+    return promise;
   }
 }
