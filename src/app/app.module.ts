@@ -9,8 +9,10 @@ import { GitDetailsComponent } from './gitdetails/gitdetails.component';
 import { GitformComponent } from './gitform/gitform.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+// import { NgProgressModule } from '@ngx-progressbar/core';
+// import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +26,8 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgProgressModule.forRoot(),
-    NgProgressHttpClientModule
+    // NgProgressModule.forRoot(),
+    // NgProgressHttpClientModule
 
   ],
   providers: [],
