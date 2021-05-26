@@ -10,8 +10,9 @@ const routes: Routes = [
   {path: 'gitdetails', component: GitDetailsComponent},
   {path: 'gitform', component: GitformComponent},
   {path: 'about', component: AboutComponent},
+  { path: '', redirectTo:"/about", pathMatch:"full"},
   { path:'**', component:NotFoundComponent},
-  { path: '', redirectTo:"/goals", pathMatch:"full"},
+  
 
 ];
 
