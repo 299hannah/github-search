@@ -10,7 +10,7 @@
   <div class="col-md-6">
     <div class="col-md-6">
       <div *ngFor='let repoDetail of repoDetails'>
-        <h4>{{repoDetail.name}} | {{repoDetail.clone_url}}</h4>
+        <h4>{{repoDetail.name}} <hr> <br> <a class="btn btn-success" href="{{repoDetail.clone_url}}"> View in github</a></h4>
         <p>{{repoDetail.description}}</p>
         <small>{{repoDetail.language}}</small>
         <small>{{repoDetail.update_url |date}}</small>
